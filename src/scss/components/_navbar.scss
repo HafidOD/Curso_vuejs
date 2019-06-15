@@ -1,9 +1,21 @@
-.main-navbar{
+.main-navbar {
+    --difference : 30px;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(0,0,0,.0975);
+    position: fixed;
+    width: 100%;
+    height: calc(var(--distance-top) - var(--difference));
 
+    z-index: var(--z-fixed);
+    background: #FFF;
+    transition: var(--all-transition);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1.25rem;
+
+
+    &.on-scroll {
+        --difference: 50px;
+    }
 }

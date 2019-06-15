@@ -1,11 +1,11 @@
 <template>
+<section>
+  <navbar></navbar>
   <div class="container">
-    <navbar>
-    </navbar>
     <router-view/>
   </div>
+</section>
 </template>
-
 <script>
 
 import Navbar from './components/Navbar';

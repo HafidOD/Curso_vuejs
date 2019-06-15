@@ -13,7 +13,7 @@ export default {
   },
   data(){
     return{
-      message: "works"
+      message: "Hola #buendia a todos"
     }
   }
 }

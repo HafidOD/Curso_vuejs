@@ -10,7 +10,9 @@
       </div>
       <article class="card__description">
         <p class="card__description-text">
-            {{ description | readMore(30, '...') }}
+            {{ 
+              description | readMore(30, '...')
+            }}
         </p>
       </article>
     </div>
@@ -30,7 +32,7 @@ export default {
     },
     likes: Number
   },
-  data: function() {
+  data() {
     return {};
   }
 };

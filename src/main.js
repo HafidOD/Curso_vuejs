@@ -13,8 +13,15 @@ Vue.filter('readMore', function (text, length, suffix) {
   return text.substring(0, length) + suffix;
 });
 
+Vue.filter('viewHashtag', function (value) {
+  console.log(value.split(' '));
+
+  return value.toUpperCase();
+});
+
 
 new Vue({
   router,
   render: h => h(App)
 }).$mount('#app')
+ 
