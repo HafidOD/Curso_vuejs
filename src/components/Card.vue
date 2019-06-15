@@ -5,7 +5,9 @@
       <p class="card__user-name">{{ userinfo.username }}</p>
     </div>
     <div class="card__body">
-      <img :src="image" class="card__header" alt>
+      <div class="card__image-with-likes" :data-count-likes="likes">
+        <img :src="image" class="card__header" alt="">
+      </div>
       <article class="card__description">
         <p class="card__description-text">
             {{ description | readMore(30, '...') }}

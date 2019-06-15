@@ -5,6 +5,13 @@ $breakpoint-lg     : 992px;
 $breakpoint-xl     : 1024px;
 
 
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @mixin phone {
       @media (max-width: #{$breakpoint-sm}) {
           @content;
@@ -12,13 +19,13 @@ $breakpoint-xl     : 1024px;
   }
 
   @mixin tablet {
-      @media (min-width: #{$breakpoint-md}) {
+      @media (max-width: #{$breakpoint-md}) {
           @content;
       }
   }
 
   @mixin laptop {
-      @media (min-width: #{$breakpoint-lg}) {
+      @media (max-width: #{$breakpoint-lg}) {
           @content;
       }
   }

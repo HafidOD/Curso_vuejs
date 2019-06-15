@@ -34,6 +34,7 @@ export default {
         .then(data => {
           this.items = data.data;
           console.log(this.items);
+          console.log(data);
         })
         .catch(err => {
           console.log(err);
