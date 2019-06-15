@@ -15,8 +15,21 @@ Vue.filter('readMore', function (text, length, suffix) {
 
 Vue.filter('viewHashtag', function (value) {
   console.log(value.split(' '));
+  let a = value.split(' ');
+  let a2 = [];
+  
+  for (let index = 0; index < a.length; index++) {
+    if(a[index].toString().includes('#')) {
+      let aux = `<a class="text-is-hashtag" href="https://www.instagram.com/explore/tags/${a[index]}/" target="_blank">${a[index]}</a>`;
+      a2.push(aux);
+    } else {
+      a2.push(a[index]);
+    }
 
-  return value.toUpperCase();
+  }
+  let finalText =`<p>${a2.join(' ')}</p>`;
+
+  return finalText;
 });
 
 
